@@ -5,7 +5,7 @@
 # WARNING! All changes made in this file will be lost!
 import mysql.connector
 from tkinter import messagebox as tkMessageBox
-
+import sys
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -37,7 +37,8 @@ class Ui_Form(object):
             rows='('+rows+')'
             self.listWidget.addItem(rows)
             rows=''
-    
+        
+        
     def Addstudent(self):
         name=self.txtname.text()
         rollno=self.txtroll.text()
@@ -65,6 +66,7 @@ class Ui_Form(object):
             result='('+result+')'
     
         self.listWidget.addItem(result)
+        
 
     def delstudent(self):
         rollno=self.txtroll.text()
