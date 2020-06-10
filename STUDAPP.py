@@ -10,11 +10,10 @@ import sys
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 try: 
-    mydb=mysql.connector.connect(host='localhost', user='root',passwd='logon@123',database='python')
+    mydb=mysql.connector.connect(host='localhost', user='root',passwd='logon@123',database='python',auth_plugin='mysql_native_password')
     mycursor=mydb.cursor()        
 except Exception:
-    tkMessageBox.showerror('connection failed ') 
-
+    print('helo')
 
 class Ui_Form(object):
     
