@@ -4,16 +4,12 @@
 #
 # WARNING! All changes made in this file will be lost!
 import mysql.connector
-from tkinter import messagebox as tkMessageBox
 import sys
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-try: 
-    mydb=mysql.connector.connect(host='localhost', user='root',passwd='logon@123',database='python',auth_plugin='mysql_native_password')
-    mycursor=mydb.cursor()        
-except Exception:
-    print('helo')
+mydb=mysql.connector.connect(host='localhost', user='root',passwd='logon@123',database='python')
+mycursor=mydb.cursor()        
 
 class Ui_Form(object):
     
